@@ -1,13 +1,14 @@
 #lang mollusk
 
 <div>
-<hr />
+<header>
+<h1 class="header">:~ title ~:</h1>
+</header>
+<hr/>
 <nav>
-:@ for sub subtitles @:
-:@ for campo sub @:
-<a href=":~ (hash-ref campo 'link) ~:"> :~ (hash-ref campo 'nome) ~: </a>
+:@ for campo subtitles @:
+  <a href=":~ (hash-ref campo "link") ~:"> :~ (hash-ref campo "nome") ~: </a>|
 :@ end @:
-:@ end @:
-</nav
-<hr />
+</nav>
+<hr/>
 </div>

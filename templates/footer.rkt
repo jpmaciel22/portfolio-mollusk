@@ -1,5 +1,7 @@
 #lang mollusk
 
 <div>
-<p>Footer!</p>
+<footer>
+Built using mollusk.
+</footer>
 </div>

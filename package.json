@@ -1,0 +1,13 @@
+{
+  "name": "mollusk",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "node build.js",
+    "dev": "nodemon --watch templates --watch data --exec \"npm run build\" && \"npm serve\"",
+    "serve": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^3.0.0"
+  }
+}

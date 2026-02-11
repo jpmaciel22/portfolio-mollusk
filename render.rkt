@@ -38,7 +38,7 @@
    "<!doctype html>\n<html lang=\"pt-br\" data-theme=\"dark\">\n<head>\n"
    "  <meta charset=\"utf-8\" />\n"
    "  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n"
-   "  <title>Mollusk</title>\n"
+   "  <title>Portfólio</title>\n"
    "    <link rel=\"stylesheet\" href=\"style.css\">"
    "</head>\n<body>\n"
    html-body

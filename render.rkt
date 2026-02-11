@@ -26,7 +26,6 @@
             ([(key val) (in-hash template-data)])
     (hash-set result key val)))
 
-;; Resto do código igual...
 (define template-path (path->complete-path (string->path template-path-str)))
 (define render-fn (dynamic-require template-path 'render))
 (define xexprs (render-fn env))

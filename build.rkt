@@ -1,7 +1,6 @@
 #lang racket
-
-(require racket/system
-         racket/path)
+(require racket/path
+         "render.rkt") ; ← importa direto, sem racket/system
 
 (define CWD (current-directory))
 (define TEMPLATES-DIR (build-path CWD "templates"))
@@ -25,9 +24,9 @@
   (printf "  Template: ~a~n" template-path)
   (printf "  Data: ~a~n" data-arg)
 
-  (define html (with-output-to-string
-                 (lambda ()
-                   (system (format "racket render.rkt \"~a\" \"~a\"" template-path data-arg)))))
+  ; ← chama a função direto, sem spawnar processo nenhum
+  (define html (render-to-html (path->string template-path)
+                               (path->string data-arg)))
 
   (define output-path (build-path OUTPUT-DIR template-dir (path-replace-extension template-name #".html")))
   (make-directory* (path-only output-path))
